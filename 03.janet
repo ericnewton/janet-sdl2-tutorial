@@ -60,11 +60,11 @@
   # Load images
   # Temporary surfaces to load images into
   # This should use only 1 temp surface, but for conciseness we use two
-  (def temp1 (SDL_LoadBMP "data/02/test1.bmp"))
-  (def temp2 (SDL_LoadBMP "data/02/test2.bmp"))
+  (def temp1 (SDL_LoadBMP "data/03/test1.bmp"))
+  (def temp2 (SDL_LoadBMP "data/03/test2.bmp"))
   (defer (map SDL_FreeSurface [temp1 temp2])
     # Make sure loads succeeded
-    (if (or (nil? temp1) (nil? temp2)))
+    (if (or (nil? temp1) (nil? temp2))
       (let [msg (string "Error loading image: " (SDL_GetError))]
 	(pause)
 	(error msg)))
