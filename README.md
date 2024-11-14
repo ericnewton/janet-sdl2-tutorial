@@ -1,5 +1,3 @@
-
-[comment]: # -*- mode: markdown-mode -*-
 # Call SDL2 library code using Janet, with examples.
 
 # Why
