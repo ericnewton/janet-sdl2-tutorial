@@ -42,4 +42,4 @@ that enters the event loop until the SDL_QUIT event occurs.
 $ janet 08.janet
 ```
 
-![](screenshot.mp4)
+![](screenshot.gif)
