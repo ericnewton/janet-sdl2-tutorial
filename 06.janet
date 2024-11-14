@@ -102,7 +102,7 @@
       (error msg)))
 
   # Load music
-  (set music (Mix_LoadMUS "06/music.wav"))
+  (set music (Mix_LoadMUS "data/06/music.wav"))
   (if (nil? music)
     (let [msg (string "Error loading music: " (Mix_GetError))]
       (print msg)
@@ -110,7 +110,7 @@
       (error msg)))
 
   # Load sound
-  (set sound (Mix_LoadWAV "06/scratch.wav"))
+  (set sound (Mix_LoadWAV "data/06/scratch.wav"))
   (if (nil? sound)
     (let [msg (string "Error loading sound: " (Mix_GetError))]
       (print msg)
