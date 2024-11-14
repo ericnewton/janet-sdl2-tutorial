@@ -52,8 +52,7 @@
 # separate keys. Order is preserved. Note that the initial list is not
 # nested. For example, [:int32 :a :int8 b] -> {:names [:a :b] :types
 # [:int32 :int8]}
-(defn named-types
-  [& pairs]
+(defn named-types [& pairs]
   (let [types @[]
         names @[]]
     (each i (range 0 (length pairs) 2)
@@ -202,16 +201,14 @@
 
 # Given a buffer of bytes and a set of names and types (see
 # named-types) decode the buffer into a structure with named values.
-(defn buffer-to-struct
-  [buffer named-types]
+(defn buffer-to-struct [buffer named-types]
   (let [names (named-types :names)
         types (named-types :types)
         values (ffi/read (ffi/struct ;types) buffer)]
     (struct ;(interleave names values))))
 
 # reverse of the buffer-to-struct
-(defn struct-to-buffer
-  [data named-types]
+(defn struct-to-buffer [data named-types]
   (let [names (named-types :names)
         types (named-types :types)
         values (map (fn [name] (get data name nil)) names)]

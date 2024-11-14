@@ -46,8 +46,7 @@
      (SDL_RenderPresent renderer)
      true))
 
-(defn init
-  []
+(defn init []
   (if (< (SDL_Init SDL_INIT_EVERYTHING) 0)
     (let [msg (string "Error initializing SDL: " (SDL_GetError))]
       (print msg)
@@ -121,8 +120,7 @@
   (Mix_PlayMusic music -1)
   true)
 
-(defn kill
-  []
+(defn kill []
   (SDL_DestroyTexture texture)
   (Mix_FreeMusic music)
   (Mix_FreeChunk sound)

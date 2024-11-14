@@ -106,8 +106,7 @@
       (error msg)))
   true)
 
-(defn kill
-  []
+(defn kill []
   (SDL_DestroyTexture texture)
   (SDL_DestroyRenderer renderer)
   (SDL_DestroyWindow window)
