@@ -35,3 +35,11 @@ Isn't portable to all platforms. Even if a suitable `pause` command
 existed, some platforms require a run through the event loop to show
 any newly created windows. A replacement pause mechanism is provided
 that enters the event loop until the SDL_QUIT event occurs.
+
+# Screenshot
+
+```
+$ janet 08.janet
+```
+
+![](screenshot.mp4)
