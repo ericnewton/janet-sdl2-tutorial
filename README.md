@@ -11,7 +11,7 @@ I began writing some SDL2 code using some hand-rolled FFI bindings to
 the tutorial at `thenumb.at`, converting the examples into Janet and
 expanding the FFI bindings as necessary.
 
-The examples intend to stay true to the C++ examples and should be
+The examples intend to stay true to the original C++ and should be
 easy enough to follow along between the two. Forgive me if there are
 any blatent errors as I'm new to both Janet and SDL2.
 
